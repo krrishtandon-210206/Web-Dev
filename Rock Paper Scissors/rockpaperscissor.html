@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-paper-scissor</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>
+            Rock Paper Scissors vs Computer!!
+        </h1>
+    </div>
+    <div>
+         <h2 id="turn">Let's Go Player 1:</h2>
+        <button class="choice" onclick="playerChoice('rock')"><img src="https://www.clipartkey.com/mpngs/m/5-55727_rock-paper-scissors-clipart-png-download-rock-paper.png" ></button>
+        <button class="choice" onclick="playerChoice('paper')"><img src="https://tl.vhv.rs/dpng/s/165-1650091_transparent-rock-paper-scissors-png-rock-paper-scissors.png" ></button>
+        <button class="choice" onclick="playerChoice('scissor')"><img src="https://www.pinclipart.com/picdir/middle/536-5360227_scissors-hand-rock-paper-scissors-png-clipart.png" ></button>
+        <p>
+            <button onclick="reset()">reset</button>
+        </p>
+        
+    </div>
+    <div>
+        <h3>Score Board:</h3>
+        <p id="score">Player: 0 | Computer: 0</p>
+    </div>
+    <script defer>
+          let p1=null;
+          let computer=null;
+          let player_count=0;
+          let computer_count=0;
+
+          function playerChoice(choice){
+                p1 = choice;
+                // Computer makes a random choice
+                const choices = ["rock", "paper", "scissor"];
+                    const rand = Math.random();
+                if(rand < 0.5) {
+                    // 50% chance player wins directly
+                   computer = p1 === "rock" ? "scissor" :p1 === "paper" ? "rock" :"paper";
+                               }
+                else {
+        // 50% chance computer picks randomly
+        const choices = ["rock","paper","scissor"];
+        computer = choices[Math.floor(Math.random() * 3)];
+    }
+                
+                checkWinner();
+          }
+
+          function checkWinner(){
+             let turnText = "";
+
+             if(p1 === computer){
+                 turnText = `It's a tie! Both chose ${p1}`;
+             } 
+             else if(
+                 (p1==="rock" && computer==="scissor") ||
+                 (p1==="paper" && computer==="rock") ||
+                 (p1==="scissor" && computer==="paper")
+             ){
+                 turnText = `You win! ${p1} beats ${computer}`;
+                 player_count++;
+             }
+             else{
+                 turnText = `Computer wins! ${computer} beats ${p1}`;
+                 computer_count++;
+             }
+
+             document.getElementById("turn").textContent = turnText;
+             document.getElementById("score").textContent = `Player: ${player_count} | Computer: ${computer_count}`;
+
+             // Reset choices for next round
+             p1 = null;
+             computer = null;
+          }
+
+          function reset(){
+            alert("Game is reset!");
+            player_count = 0;
+            computer_count = 0;
+            document.getElementById("turn").textContent="Let's Go Player 1:";
+            document.getElementById("score").textContent="Player: 0 | Computer: 0";
+          }
+    </script>
+</body>
+</html>

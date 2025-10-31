@@ -1,0 +1,99 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, navy, #2a5298); /* deep ocean blue */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #fffaf0; /* light parchment color */
+}
+
+/* Main Heading */
+h1 {
+  color: wheat; /* Straw Hat yellow */
+  margin: 20px 0;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 6px #000;
+  border-bottom: 3px solid #e74c3c; /* red underline like Luffy's shirt */
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Player turn or result text */
+#turn {
+  margin-top: 20px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ecf0f1; /* light text */
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Choice Buttons */
+.choice {
+  border: 3px solid #f1c40f;
+  background: #e74c3c; /* Luffy red */
+  border-radius: 12px;
+  margin: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 5px;
+}
+
+.choice img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+}
+
+.choice:hover {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+/* Reset Button */
+button {
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  margin: 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #f39c12; /* sunny orange like the Sunny ship */
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+button:hover {
+  background-color: #d35400;
+  transform: scale(1.08);
+}
+
+/* Scoreboard Section */
+h3 {
+  margin-top: 30px;
+  color: #f1c40f;
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px #000;
+}
+
+#score {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #f1c40f;
+}
+
+
+
+
