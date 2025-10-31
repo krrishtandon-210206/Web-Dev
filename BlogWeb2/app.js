@@ -1,6 +1,6 @@
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBAGXqM2WPlJDc1pIJrdZEclac9JXfff2I",
+  apiKey: "",
   authDomain: "blogweb-77ead.firebaseapp.com",
   projectId: "blogweb-77ead",
   storageBucket: "blogweb-77ead.firebasestorage.app",
@@ -213,4 +213,5 @@ function loadShowPage() {
   };
 
   loadBlog();
+
 }
