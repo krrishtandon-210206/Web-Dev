@@ -1,12 +1,6 @@
 
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "blogweb-77ead.firebaseapp.com",
-  projectId: "blogweb-77ead",
-  storageBucket: "blogweb-77ead.firebasestorage.app",
-  messagingSenderId: "1039461822693",
-  appId: "1:1039461822693:web:eb854ed2be07d00327640c",
-  measurementId: "G-9ZMM7NHRBE",
+  
 };
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
